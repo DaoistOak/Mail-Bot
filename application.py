@@ -138,13 +138,14 @@ def send_email(sender_email, sender_password, receiver_email, subject, content):
 # Input for sender's email and password
 sender_email = input("Enter your email: ")
 sender_password = input("Enter your app key: ")
+a=int(input("How many times?:")
 # Loop counter
 loop_counter = 1
 # Loop to perform actions 23 times
-for _ in range(23):
+for _ in range(a):
     row_file = 'starting_row.txt'
     starting_row = read_starting_row(row_file)
-    file_path = 'Gmail Directory 2078.xlsx'
+    file_path = 'Directory.xlsx'
     starting_row, selected_emails = process_excel_rows(file_path, starting_row)
 
     # Print the content of the selected rows in the desired format
@@ -152,8 +153,8 @@ for _ in range(23):
 
     # Example usage:
     receiver_email = selected_emails
-    subject = read_subject('HR Promo Subject 2080.docx')  # Replace with your subject
-    content = read_docx('HR Promo Letter 2080.docx')  # Replace with your document path
+    subject = read_subject('Subject.docx')  # Replace with your subject
+    content = read_docx('Content.docx')  # Replace with your document path
     doc_link = ""  # Replace with your document link
 
     # Sending the email
